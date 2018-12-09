@@ -657,7 +657,7 @@ function fetch163Songs(IDS) {
                 return obj;
             }.bind(this))
         }
-        if (os.isTablet || os.isPc) {
+        if (os.isTablet || os.isPc || os.isPhone) {
             // Active player
             // CheckCookie
             var player_auto = Cookies.get('player_auto');
@@ -669,7 +669,7 @@ function fetch163Songs(IDS) {
                     activePlayer(false);
                 }
             } else {
-                swal("是否需要播放我们精选的乐曲来欣赏一言呢？", {
+                swal("是否需要播放精选的乐曲来欣赏一言呢？", {
                     buttons: {
                         cancel: "拒绝",
                         allow: "好的"
